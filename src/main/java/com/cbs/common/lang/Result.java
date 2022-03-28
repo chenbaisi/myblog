@@ -23,8 +23,11 @@ public class Result implements Serializable {
         return result;
     }
 
+    public static Result fail(String msg){
+        return fail(msg, null);
+    }
     public static Result fail(String msg, Object data){
-        return fail(200, msg, data);
+        return fail(400, msg, data);
     }
 
     public static Result fail(int code, String msg, Object data){
