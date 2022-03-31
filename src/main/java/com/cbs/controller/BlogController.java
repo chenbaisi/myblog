@@ -39,7 +39,7 @@ public class BlogController {
     }
 
     //@PathVariable动态路由
-    @GetMapping("/bolg/{id}")
+    @GetMapping("/blog/{id}")
     public Result detail(@PathVariable Long id) {
         Blog blog = blogService.getById(id);
         Assert.notNull(blog, "该博客已删除");
